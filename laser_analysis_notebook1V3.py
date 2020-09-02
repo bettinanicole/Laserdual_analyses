@@ -1,10 +1,4 @@
 
-# coding: utf-8
-
-# # Source code to read data
-
-# In[59]:
-
 
 import numpy
 import numpy as np
