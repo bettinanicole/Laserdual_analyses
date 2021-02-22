@@ -91,14 +91,7 @@ def extract_allinfo(fileName):
          avg_rt_bx_true.append(np.average(rt_s[(extract_bx&remove_nans)&(extract_block&(accuracy_s==True))]))                          
          avg_rt_by_true.append(np.average(rt_s[(extract_by&remove_nans)&(extract_block&(accuracy_s==True))]))                          
          avg_rt_ng_true.append(np.average(rt_s[(extract_ng&remove_nans)&(extract_block&(accuracy_s==True))]))
-
-         #if np.isnan(np.average(rt_s[(extract_ng&remove_nans)&extract_block])):
-          #      print rt_s[(extract_ng&remove_nans)&extract_block]
-          #      print rt_s[(extract_ng)&extract_block]
-            
         
-
-             
          no_of_nans_ax.append(len(rt_s[(extract_ax&(~remove_nans))&extract_block]))                          
          no_of_nans_ay.append(len(rt_s[(extract_ay&(~remove_nans))&extract_block]))
 
@@ -107,7 +100,6 @@ def extract_allinfo(fileName):
          no_of_nans_ng.append(len(rt_s[(extract_ng&(~remove_nans))&extract_block]))           
                                                                    
                                                                                                                                                      
- #    print accuracy_s==True                                                     
          num_true_acc_ax.append(len(rt_s[(extract_ax&(accuracy_s==True))&extract_block]))                   
          tot_acc_ax.append(len(rt_s[extract_ax&extract_block]))                                            
 
@@ -131,14 +123,10 @@ def extract_allinfo(fileName):
         
      return avg_rt_all,no_of_nans_all,num_true_acc_all,tot_acc_all,avg_rt_all_true
 
-'''
-data frame look like dis: 
-columns = ['subj','trialType','cue','probe','response','rt','accuracy']
-'''
 
 #loop through csv files# 
 
-path = '/Users/bettina/Desktop/LaserDual/correctedData/'
+path = '/Users/B/Desktop/LaserDual/correctedData/'
 
 
 
@@ -199,15 +187,7 @@ rt_all_true=numpy.array(rt_all_true)
 no_of_nans_all=numpy.array(no_of_nans_all)
 num_true_acc_all=numpy.array(num_true_acc_all)
 tot_acc_all=numpy.array(tot_acc_all)
-
-
-##make sure this line works for one subject or try after#
-
-
-
-
-
-               
+       
                                                                                                                                              
     
 #extract_allinfo(fileNames[0])  
